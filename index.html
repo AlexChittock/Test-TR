@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="datagridApp">
+<head>
+    <link href="css/app.css" rel="stylesheet" type="text/css">
+    <title>Thomson Reuters Test Task</title>
+    <script src="lib/angular.js" type="text/javascript"></script>
+    <script src="js/controllers.js" type="text/javascript"></script>
+</head>
+<body ng-controller="DataGridController">
+    <article class="test-dialog">
+        <header class="">DataGrid Control Panel</header>
+        <section>
+            <header>
+                <h1>DataGrid</h1>
+                <nav class="test-dialog-links">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li>
+                            <form action="#" method="post">
+                                <input type="text" name="search" placeholder="Search" ng-model="StockFilter">
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <nav class="test-nav">
+                <ul>
+                    <li class="test-nav-home"><a href="#">Home</a></li>
+                    <li class="selected"><a href="#">Preview</a></li>
+                    <li><a href="#">Activity</a></li>
+                    <li><a href="#">Control</a></li>
+                    <li><a href="#">Issue</a></li>
+                    <li><a href="#">Overview</a></li>
+                    <li class="test-nav-account"><a href="#">Admin</a></li>
+                    <li class="test-nav-account"><a href="#">My Profile</a></li>
+                </ul>
+            </nav>
+
+            <table class="test-data-grid" border="0" cellpadding="0" cellspacing="0" ng-cloak>
+                <thead>
+                    <tr>
+                        <th ng-repeat="column in columns" ng-class="(column.isNumeric ? 'numeric ' : '') + ($index == sortBy ? 'active' : '')" ng-click="sort(''+this.$index)" ng-cloak>
+                            {{column.label}} <i class="test-data-grid-sorter" ng-if="$index == sortBy" ng-class="sortReverse ? 'desc' : 'asc'"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="test-data-grid-loader" ng-hide="columns.length != 0">
+                        <td>Loading data...</td>
+                    </tr>
+                    <tr ng-repeat="item in items | filter:StockFilter | orderBy:sorter:sortReverse">
+                        <td ng-repeat="column in item" ng-class="(column.isNumeric ? 'numeric ' + (column.percentage ? (column.value < 0 ? 'test-data-grid-item-neg' : column.value > 0 ? 'test-data-grid-item-pos' : ''):'') : '') + (columns[$index].isHighlighted ? ' hover' : '')" ng-mouseenter="columns[$index].isHighlighted = true" ng-mouseleave="columns[$index].isHighlighted = false">
+                            {{column.value + (column.percentage ? "%" : "")}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </article>
+</body>
+</html>

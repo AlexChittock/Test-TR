@@ -1,0 +1,21 @@
+@import "dialog.css";
+@import "nav.css";
+@import "data-grid.css";
+
+
+html {
+    font-family: 'Tahoma';
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    background: #272727 url("../img/bkg.jpg") center center no-repeat fixed;
+/*    background-size: cover;
+*/    height: 100%;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0 0 175px;
+    min-width: 960px;
+}

@@ -1,0 +1,99 @@
+table.test-data-grid {
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #c5c5c5;
+    margin: 20px 0 0;
+    background-color: #fefeff;
+}
+
+table.test-data-grid > thead {
+    background-color: #d6e7f2;
+    border-bottom: 1px solid #c5c5c5;
+    box-shadow: inset 0 1px 0 #eff1f2;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, #D6E7F2),
+        color-stop(1, #E5F0F7)
+    );
+    background-image: -o-linear-gradient(top, #D6E7F2 0%, #E5F0F7 100%);
+    background-image: -moz-linear-gradient(top, #D6E7F2 0%, #E5F0F7 100%);
+    background-image: -webkit-linear-gradient(top, #D6E7F2 0%, #E5F0F7 100%);
+    background-image: -ms-linear-gradient(top, #D6E7F2 0%, #E5F0F7 100%);
+    background-image: linear-gradient(to top, #D6E7F2 0%, #E5F0F7 100%);
+}
+
+table.test-data-grid > thead th {
+    text-shadow: 0 1px 0 #fff;
+    color: #8c98a0;
+    cursor: pointer;
+}
+
+table.test-data-grid > thead th,
+table.test-data-grid > tbody td {
+    text-align: left;
+    padding: 10px;
+    color: #8c98a0;
+}
+
+table.test-data-grid > thead th.active {
+    color: #ea8500;
+}
+
+table.test-data-grid .numeric {
+    text-align: right;
+}
+
+table.test-data-grid > thead th.active {
+    padding: 10px 0 10px 10px;
+}
+
+table.test-data-grid > thead th.numeric.active {
+    padding: 10px 10px 10px 0;
+}
+
+table.test-data-grid tbody > tr:nth-child(even) > td {
+    background-color: #f8f8f8;
+}
+
+table.test-data-grid > tbody td.test-data-grid-item-pos {
+    color: #44C269;
+}
+
+table.test-data-grid > tbody td.test-data-grid-item-neg {
+    color: #D15D5F;
+}
+
+table.test-data-grid tbody > tr:hover > td {
+    background-color: #eee;
+}
+
+table.test-data-grid > tbody > tr > td.hover {
+    background-color: #f2f2f2;
+}
+
+table.test-data-grid > tbody > tr:nth-child(even) > td.hover {
+    background-color: #e2e2e2;
+}
+
+table.test-data-grid i.test-data-grid-sorter {
+    display: inline-block;
+    height: 6px;
+    width: 10px;
+    background: transparent url("../img/arrow.png") top right no-repeat;
+    margin-right: -4px;
+}
+
+table.test-data-grid i.test-data-grid-sorter.asc {
+    background-position: top left;
+}
+
+table.test-data-grid i.test-data-grid-sorter.desc {
+    background-position: bottom left;
+}
+
+table.test-data-grid > tbody > tr.test-data-grid-loader > td {
+    padding: 10px 10px 10px 30px;
+    background: transparent url("../img/progress.gif") 1% 50% no-repeat;
+}

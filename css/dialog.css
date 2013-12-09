@@ -1,0 +1,103 @@
+.test-dialog {
+    border-top: 1px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #000, 0 0 0 1px #252a2d;
+    background-color: #eff9ff;
+    padding: 0 3px 3px 3px;
+    overflow: hidden;
+    margin: 175px 175px 0;
+}
+
+.test-dialog > header {
+    border-bottom: 1px solid #c5c5c5;
+    color: #363636;
+    font-size: 1rem;
+    padding: 13px 10px 10px;
+    background-color: #dfedf5;
+    margin: -3px -3px 0 -3px;
+    border-radius: 3px 3px 0 0;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, #D6E7F2),
+        color-stop(1, #E5F0F7)
+    );
+    background-image: -o-linear-gradient(top, #D6E7F2 0%, #E5F0F7 100%);
+    background-image: -moz-linear-gradient(top, #D6E7F2 0%, #E5F0F7 100%);
+    background-image: -webkit-linear-gradient(top, #D6E7F2 0%, #E5F0F7 100%);
+    background-image: -ms-linear-gradient(top, #D6E7F2 0%, #E5F0F7 100%);
+    background-image: linear-gradient(to top, #D6E7F2 0%, #E5F0F7 100%);
+}
+
+.test-dialog > section {
+    border: 1px solid #c5c5c5;
+    background-color: #fff;
+    border-radius: 0 0 2px 2px;
+    margin: 3px 0 0;
+    padding: 20px;
+}
+
+.test-dialog > section > header {
+    margin: 0 0 25px;
+    overflow: hidden;
+}
+
+.test-dialog > section > header > h1 {
+    overflow: hidden;
+    text-indent: -999px;
+    background: transparent url("../img/header.png") top left no-repeat;
+    height: 25px;
+    width: 163px;
+    margin: 0;
+    float: left;
+}
+
+.test-dialog > section > header > nav {
+    float: right;
+}
+
+.test-dialog > section > header > nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.test-dialog > section > header > nav > ul > li {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.test-dialog > section > header > nav > ul > li > a {
+    padding: 3px 16px 2px;
+    border-left: 1px solid #e4e4e4;
+    text-decoration: none;
+    display: block;
+    color: #808080;
+}
+
+.test-dialog > section > header > nav > ul > li:first-child > a {
+    border: none;
+}
+
+.test-dialog > section > header > nav > ul > li input[type="text"] {
+    height: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 2px;
+    text-shadow: 0 1px 0 #fff;
+    background: #fafafa url("../img/search.png") 3% 50% no-repeat;
+    padding: 9px 10px 10px 29px;
+    width: 221px;
+    box-shadow: inset 0 1px 1px #eeeeee;
+}
+
+.test-dialog > section > header > nav > ul > li input[type="text"]::placeholder {
+    color: #c5c5c5;
+}
+
+.test-dialog > section > header > nav > ul > li input[type="text"]:focus {
+    outline: none;
+    background-color: #efefef;
+}
