@@ -19,7 +19,7 @@ app.controller("DataGridController", function($scope, $http, $filter){
         return value.numericValue
             ? val.indexOf("%") == val.length - 1
                 ? $filter('number')(parseFloat(val), 2)
-                : val.indexOf("£") == 0
+                : val.indexOf("\u00a3") == 0
                     ? val
                     : $filter('number')(val)
             : val
